@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main ()
+{
+    float V; // Voltaje
+    float VR = 1.5, VV = 1.8, VB = 2.8; // Voltaje en Led Rojo, Voltaje en Led Verde, Voltaje wn Led Blanco
+    float IR = 0.015, IV = 0.015, IB = 0.02; // Corriente en Led Rojo, Corriente en Led Verde, Corriente en Led Blanco
+    float RR, RV, RB; // Resistencia de Led Rojo, Resistencia de Led Verde, Resistencia de Led Blanco
+
+    printf ("Escribe el valor de la fuente V: \ n");
+    scanf ("% f", & V);
+
+
+    RR = (V-VR) / IR;
+    RV = (V-VV) / IV;
+    RB = (V-VB) / IB;
+
+    printf ("La resistencia en Led Rojo es% 0.4fOhms \ n", RR);
+    printf ("La resistencia en Led Verde es% 0.4fOhms \ n", RV);
+    printf ("La resistencia en Led Blanco es% 0.4fOhms \ n", RB);
+
+
+    return 0;
+}
